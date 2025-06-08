@@ -2,6 +2,10 @@ package com.javacake.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import com.javacake.entity.Role;
+
+
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -9,6 +13,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,6 +26,10 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserType userType;
 
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
     private String bio;
     private String profileImage;
+
 }

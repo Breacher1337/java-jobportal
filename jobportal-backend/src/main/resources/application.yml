@@ -2,10 +2,16 @@ server:
   port: 8080
 
 spring:
+  profiles:
+    active: dev
+
   datasource:
-    url: jdbc:postgresql://localhost:5432/jobportal
-    username: postgres
-    password: yourpassword
+#    url: ${SPRING_DATASOURCE_URL}
+#    Swap for prod
+    url: jdbc:postgresql://localhost:5432/linkedin
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+
   jpa:
     hibernate:
       ddl-auto: validate
