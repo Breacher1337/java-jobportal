@@ -136,7 +136,7 @@ export default function DashboardPage() {
                         <StatLabel fontWeight="medium" color={cardTextColor}>Active Job Postings</StatLabel>
                         <Icon as={FiBriefcase} w={6} h={6} color="blue.500" />
                     </Box>
-                    <StatNumber fontSize="3xl" fontWeight="bold" color={useColorModeValue('gray.800', 'white')}>
+                    <StatNumber fontSize="3xl" fontWeight="bold">
                         {jobCount ?? "–"}
                     </StatNumber>
                 </Stat>
@@ -146,7 +146,7 @@ export default function DashboardPage() {
                         <StatLabel fontWeight="medium" color={cardTextColor}>Total Users</StatLabel>
                         <Icon as={FiUsers} w={6} h={6} color="green.500" />
                     </Box>
-                    <StatNumber fontSize="3xl" fontWeight="bold" color={useColorModeValue('gray.800', 'white')}>
+                    <StatNumber fontSize="3xl" fontWeight="bold">
                         {userCount ?? "–"}
                     </StatNumber>
                 </Stat>
